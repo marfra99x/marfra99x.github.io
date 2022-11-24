@@ -1,23 +1,33 @@
 <template>
-  <v-app>
-    <v-main>
-      <HomePage/>
-    </v-main>
-  </v-app>
+    <v-app :dark="goDark" >
+        <v-main>
+            <TopBar :goDark="goDark" @changeTheme="updateTheme($event)"/>
+            WIP
+        </v-main>
+    </v-app>
 </template>
 
 <script>
-import HomePage from './views/HomePage';
+import TopBar from './components/TopBar';
 
 export default {
-  name: 'App',
+    name: 'App',
 
-  components: {
-    HomePage: HomePage,
-  },
+    components: {
+        TopBar: TopBar,
+    },
 
-  data: () => ({
-    //
-  }),
-};
+    methods: {
+        updateTheme(updatedTheme) {
+            this.goDark = !updatedTheme;
+        }
+    },
+    data() {
+        return { goDark: false };
+    },
+}
 </script>
+
+<style>
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css";
+</style>
