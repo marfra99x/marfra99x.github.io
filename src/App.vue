@@ -1,5 +1,5 @@
 <template>
-    <v-app :dark="goDark">
+    <v-app :dark="goDark" :style="{background: $vuetify.theme.themes[theme].background}">
         <v-main>
             <v-container align-center>
                 <TopBar :goDark="goDark" @changeTheme="updateTheme($event)" />
@@ -23,11 +23,14 @@ export default {
         updateTheme(updatedTheme) {
             this.goDark = !updatedTheme;
             this.$vuetify.theme.dark = this.goDark
-            console.log(this.goDark)
+            this.theme = (this.goDark)? 'dark': 'light'
         }
     },
     data() {
-        return { goDark: false };
+        return { 
+            goDark: false,
+            theme: 'light' 
+        };
     },
 }
 </script>
