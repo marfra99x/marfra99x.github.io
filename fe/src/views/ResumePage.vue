@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-layout row justify-center align-center wrap class="mt-4 pt-2">
-            <v-flex xs12 sm12 md5 lg6 xl6 class="mt-4 pt-4">
+            <v-flex xs12 sm12 md12 lg6 xl6 class="mt-4 pt-4">
                 <h2 class="mb-4 pl-4 pt-2">Education</h2>
                 <v-card-text class="py-0">
                     <v-timeline align-top dense>
@@ -49,7 +49,7 @@
                     </v-timeline>
                 </v-card-text>
             </v-flex>
-            <v-flex xs12 sm12 md4 lg6 xl6 class="mt-4 pt-2">
+            <v-flex xs12 sm12 md12 lg6 xl6 class="mt-4 pt-2">
                 <h2 class="mb-4 pl-4">Experience</h2>
                 <v-card-text class="py-0">
                     <v-timeline align-top dense>
@@ -110,7 +110,7 @@
 
         <v-layout row justify-center align-center wrap class="mt-0 pt-0 mb-4 pb-4">
             <v-layout row justify-center align-center wrap class="mt-4 pt-2">
-                <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
+                <v-flex xs11 sm11 md11 lg5 xl5 class="mx-2 pt-4">
                     <strong>Algorithms</strong>
                     <v-progress-linear v-model="bufferAlgorithm" :buffer-value="bufferValue" color="primary" height="16">
                     </v-progress-linear>
@@ -130,7 +130,7 @@
                     <v-progress-linear v-model="bufferJava" :buffer-value="bufferValue" color="primary" height="16">
                     </v-progress-linear>
                 </v-flex>
-                <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
+                <v-flex xs11 sm11 md11 lg5 xl5 class="mx-2 pt-4">
                     <strong>String Matching</strong>
                     <v-progress-linear v-model="bufferSM" :buffer-value="bufferValue" color="primary" height="16">
                     </v-progress-linear>
@@ -160,7 +160,7 @@
             </h2>
         </v-layout>
         <v-layout row justify-center align-center wrap class="mt-0 pt-0">
-            <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
+            <v-flex xs12 sm12 md12 lg5 xl5 class="mx-2 pt-4">
                 <strong>Italian</strong>
                 <v-progress-linear v-model="bufferItalian" :buffer-value="bufferValue" color="primary" height="16">
                 </v-progress-linear>
