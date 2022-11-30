@@ -22,8 +22,8 @@
         <v-app-bar flat dense color="transparent">
             <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-app-bar-title class="headline">
-                <span class="">Francesco</span>
-                <span class="primary--text">Marino</span>
+                <span class="headline text-capitalize">Francesco</span>
+                <span class="primary--text headline text-capitalize">Marino</span>
             </v-app-bar-title>
             <v-spacer></v-spacer>
             <v-btn @click="changeTheme" depressed small icon class="hidden-md-and-up">
@@ -48,6 +48,10 @@ export default {
     props: {
         goDark: {
             type: Boolean
+        },
+        blue: {
+            type: String,
+            default: "#FF00FF"
         }
     },
     data() {
@@ -57,6 +61,7 @@ export default {
     },
     methods: {
         changeTheme() {
+
             this.$emit("changeTheme", this.goDark);
         }
     }

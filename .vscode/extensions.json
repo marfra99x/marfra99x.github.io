@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "mhutchie.git-graph",
+        "yzhang.markdown-all-in-one",
+        "oderwat.indent-rainbow",
+        "ms-vsliveshare.vsliveshare",
+        "mechatroner.rainbow-csv",
+        "wmaurer.change-case",
+        "esbenp.prettier-vscode",
+        "pustelto.bracketeer",
+        "tyriar.sort-lines",
+        "firsttris.vscode-jest-runner"
+    ]
+}

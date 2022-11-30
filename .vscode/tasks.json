@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true
+    },
+    "tasks": [
+        {
+            "label": "fe",
+            "type": "shell",
+            "command": "scripts/fe.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "be",
+            "type": "shell",
+            "command": "scripts/be.sh",
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}
