@@ -65,15 +65,11 @@
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
     data() {
         document.title = "Research | Francesco Marino"
         return {
-            number_of_articles: null,
-            number_of_citations: null,
-            h_index: null,
             papers: [
                 {
                     title: "Reducing Time and Space in Indexed String Matching by Characters Distance Text Sampling.",
@@ -110,25 +106,12 @@ export default {
                     year: "2021",
                     authors: "Simone Faro, Francesco Pio Marino and Arianna Pavone"
                 },
-
             ],
+            number_of_articles: 6,
+            number_of_citations: 10,
+            h_index: 2,
         }
     },
-    created() {
-        this.get_info()
-    },
-    methods: {
-        async get_info() {
-            axios.defaults.baseURL = 'http://localhost:5000/';
-            await axios.get(
-                "/research_info"
-            ).then((result) => {
-                this.number_of_articles = result.data["number_of_articles"]
-                this.number_of_citations = result.data["number_of_citations"]
-                this.h_index = result.data["h_index"]
-            })
-        }
-    }
 }
 
 </script>
