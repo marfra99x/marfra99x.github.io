@@ -16,11 +16,13 @@ export default new Vuetify({
         success: "#4CAF50",
         warning: "#FFC107",
         background: '#FAFAFA',
+        anchor: '#0066CC'
       },
       dark: {
         primary: "#1976D2",
         secondary: "#fba92c",
         background: "#303030",
+        anchor: '#CC6600'
       },
     },
   },

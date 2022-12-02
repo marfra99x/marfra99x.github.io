@@ -11,19 +11,24 @@
         {
             "label": "fe",
             "type": "shell",
+            "isBackground": true,
             "command": "scripts/fe.sh",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
+            "problemMatcher": [],
         },
         {
             "label": "be",
             "type": "shell",
             "command": "scripts/be.sh",
             "isBackground": true,
-            "problemMatcher": []
+            "problemMatcher": [],
+        },
+        {
+            "label": "Build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": ["be", "fe"]
         }
     ]
 }

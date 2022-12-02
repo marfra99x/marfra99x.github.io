@@ -1,5 +1,7 @@
 #!/usr/bin/env sh 
 
+cd fe
+
 set -e
 
 npm run build

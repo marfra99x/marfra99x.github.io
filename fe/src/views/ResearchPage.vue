@@ -1,13 +1,14 @@
 <template>
     <div>
         <v-layout row justify-center align-center wrap class="mt-4 pt-2">
-            <v-flex xs12 sm12 md12 lg9 xl9 class="mt-4 pt-4">
+            <v-flex xs12 sm12 md12 lg8 xl8 class="mt-4 pt-4 pr-4 mr-4">
                 <div>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum."
+                    Since 2020 I published {{ number_of_articles }} articles in International Journals and
+                    Conferences especially in the field of Sampled String Matching.
+                    <br>
+                    My research interest are mainly focused on: text and strings processing algorithms, exact and
+                    approximate pattern matching, multiple string matching, offline string matching, pattern matching on
+                    compressed texts and sort algorithms.
                 </div>
             </v-flex>
             <v-flex justify-end align-end xs12 sm12 md12 lg3 xl3 class="mt-4 pt-2">
@@ -32,6 +33,34 @@
                 </v-card>
             </v-flex>
         </v-layout>
+        <v-layout row justify-start align-center wrap class="mt-4 pt-2">
+            <v-flex xs12 sm12 md12 lg8 xl8 class="mt-4 pt-4 pr-4 mr-4">
+                <div class="headline text-center primary--text">List of published papers:</div>
+            </v-flex>
+        </v-layout>
+        <v-layout row justify-center align-center wrap class="mt-4 pt-2">
+            <v-flex xs12 sm12 md12 lg8 xl8 class="mt-4 pt-4">
+                <div v-for="item of papers" :key="item.title">
+                    <span class="primary--text">
+                        {{ item['year'] }}.
+                    </span>
+                    <span>
+                        <a :href="item['href']" target='_blank'>{{ item['title'] }}</a>
+                    </span>
+                    <br>
+                    <div>
+                        {{ item['authors'] }}
+                        <br>
+                        {{ item['publisher'] }}, {{ item["year"] }}
+                    </div>
+                    <br>
+                    <!-- <a style="text-decoration: none" :href="item['href']" target='_blank'>{{ item['title'] }}</a> -->
+                </div>
+            </v-flex>
+            <v-flex xs12 sm12 md12 lg3 xl3 class="mt-4 pt-4">
+
+            </v-flex>
+        </v-layout>
     </div>
 </template>
 
@@ -45,6 +74,44 @@ export default {
             number_of_articles: null,
             number_of_citations: null,
             h_index: null,
+            papers: [
+                {
+                    title: "Reducing Time and Space in Indexed String Matching by Characters Distance Text Sampling.",
+                    publisher: "Stringology",
+                    href: "http://www.stringology.org/event/2020/p13.html",
+                    year: "2020",
+                    authors: "Simone Faro and Francesco Pio Marino"
+                },
+                {
+                    title: "Fast-Insertion-Sort: a New Family of Efficient Variants of the Insertion-Sort Algorithm.",
+                    publisher: "SOFSEM (Doctoral Student Research Forum)",
+                    href: "https://ceur-ws.org/Vol-2568/paper4.pdf",
+                    year: "2020",
+                    authors: "Simone Faro, Francesco Pio Marino and Stefano Scafiti"
+                },
+                {
+                    title: "Efficient Online String Matching Based on Characters Distance Text Sampling.",
+                    publisher: "Algorithmica 82(11): 3390-3412",
+                    href: "https://link.springer.com/article/10.1007/s00453-020-00732-4",
+                    year: "2020",
+                    authors: "Simone Faro, Francesco Pio Marino and Arianna Pavone"
+                },
+                {
+                    title: "Towards an Efficient Text Sampling Approach for Exact and Approximate Matching.",
+                    publisher: "Stringology",
+                    href: "http://www.stringology.org/event/2021/p07.html",
+                    year: "2021",
+                    authors: "	Simone Faro, Francesco Pio Marino, Arianna Pavone and Antonio Scardace"
+                },
+                {
+                    title: "Enhancing Characters Distance Text Sampling by Condensed Alphabets. ",
+                    publisher: " Italian Conference on Theoretical Computer Science",
+                    href: "https://ceur-ws.org/Vol-3072/paper1.pdf",
+                    year: "2021",
+                    authors: "Simone Faro, Francesco Pio Marino and Arianna Pavone"
+                },
+
+            ],
         }
     },
     created() {
