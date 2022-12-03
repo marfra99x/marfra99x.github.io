@@ -71,7 +71,8 @@ export default {
                     icon: "fab fa-telegram"
                 },
             ],
-            myDescription: "I have recently finished my master degree in Computer Science at the University of Catania. I have always been passionate by programming and the software life cycle, and I have a strong personal background acquired during my studies during both high school and university focused on Computer Science. I like to expand my knowledge as much as possible, both in practical and theoretical. During my studies I have also been part of a research group focused on the topic of 'String Matching' that allowed me to publish several papers in journals and to attend several conferences as speaker. During and after my studies, I gained work and projects experience, which allowed me to also develop team-working and problem-solving skills that I intend to use in my role. I am very committed to succeeding in my career and I am extremely driven in achieving my goals. (WIP)"
+            myDescription: "", 
+            oldDesc: "I have recently finished my master degree in Computer Science at the University of Catania. I have always been passionate by programming and the software life cycle, and I have a strong personal background acquired during my studies during both high school and university focused on Computer Science. I like to expand my knowledge as much as possible, both in practical and theoretical. During my studies I have also been part of a research group focused on the topic of 'String Matching' that allowed me to publish several papers in journals and to attend several conferences as speaker. During and after my studies, I gained work and projects experience, which allowed me to also develop team-working and problem-solving skills that I intend to use in my role. I am very committed to succeeding in my career and I am extremely driven in achieving my goals. (WIP)"
         }
     }
 
