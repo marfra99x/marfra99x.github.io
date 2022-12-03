@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-layout row justify-center align-center wrap class="mt-4 pt-2">
-            <v-flex xs12 sm12 md12 lg8 xl8 class="mt-4 pt-4 pr-4 mr-4">
+            <v-flex xs10 sm10 md10 lg8 xl8 class="mt-4 pt-4 pr-4 mr-4">
                 <div>
                     Since 2020 I published {{ number_of_articles }} articles in International Journals and
                     Conferences especially in the field of Sampled String Matching.
@@ -11,7 +11,7 @@
                     compressed texts and sort algorithms.
                 </div>
             </v-flex>
-            <v-flex justify-end align-end xs12 sm12 md12 lg3 xl3 class="mt-4 pt-2">
+            <v-flex justify-end align-end xs10 sm10 md10 lg3 xl3 class="mt-4 pt-2">
                 <v-card class="d-flex flex-column" max-width="300">
                     <v-card-text>
                         <div class="text-center display-1 primary--text">
@@ -34,12 +34,12 @@
             </v-flex>
         </v-layout>
         <v-layout row justify-start align-center wrap class="mt-4 pt-2">
-            <v-flex xs12 sm12 md12 lg8 xl8 class="mt-4 pt-4 pr-4 mr-4">
+            <v-flex xs10 sm10 md10 lg8 xl8 class="mt-4 pt-4 pr-4 mr-4">
                 <div class="headline text-center primary--text">List of published papers:</div>
             </v-flex>
         </v-layout>
         <v-layout row justify-center align-center wrap class="mt-4 pt-2">
-            <v-flex xs12 sm12 md12 lg8 xl8 class="mt-4 pt-4">
+            <v-flex xs10 sm10 md10 lg8 xl8 class="mt-4 pt-4">
                 <div v-for="item of papers" :key="item.title">
                     <span class="primary--text">
                         {{ item['year'] }}.

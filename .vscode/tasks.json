@@ -28,7 +28,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "dependsOn": ["be", "fe"]
+            "dependsOn": ["fe"]
         }
     ]
 }

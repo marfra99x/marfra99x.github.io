@@ -46,7 +46,7 @@
                 </v-card-actions>
             </v-flex>
         </v-layout>
-        <v-flex justify-center align-center xs12 sm12 md4 lg12 xl5 class="mt-4 pt-4 pr-16 pl-16">
+        <v-flex justify-center align-center xs12 sm12 md4 lg12 xl5 class="mt-4 pt-4 ">
             {{ myDescription }}
         </v-flex>
     </div>
