@@ -4,7 +4,7 @@
             <v-list class="pt-4">
                 <v-list-item active-class="primary--text" to="/">
                     <v-list-item-content>
-                        <v-list-item-title>HOME</v-list-item-title>
+                        <v-list-item-title>Home</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
                 <v-list-item active-class="primary--text" to="/resume">

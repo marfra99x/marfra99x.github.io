@@ -31,5 +31,7 @@ export const i18n_fr = {
     "English": "Anglais",
     "French": "Français",
     "Download Resume": "Télécharger CV",
-    "research_description": "En cours de traduction"
+    "research_description": "...",
+    "Developed using": "...",
+    "Some feature have just learning purpose.": "....",
 }

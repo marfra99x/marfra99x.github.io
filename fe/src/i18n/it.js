@@ -32,4 +32,6 @@ export const i18n_it = {
     "French": "Frencese",
     "Download Resume": "Scarica CV",
     "research_description": "Dal 2020 ho pubblicato {num} articli in Journal e Conferenze Internazionali, soprattutto nell'ambito del Sampled String Matching. Gli ambiti di ricerca a cui mi interesso maggiormente sono: algoritmi di text e string processing, algoritmi di string matching esatto ed approssimato, string matching multiplo, offline string matching, pattern matching su sequenze compresse ed algoritmi di ordinamento.",
+    "Developed using": "Sviluppato con",
+    "Some feature have just learning purpose.": "Alcune funzionalità sono puramente a scopo didattico.",
 }

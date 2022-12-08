@@ -1,5 +1,5 @@
 export const i18n_en = {
-    "my_description": "My english description",
+    "my_description": "Full stack Engineer that has always been passionated by coding. I approached competitive programming as individual contestant first becoming regional champion and 50th Italian ranked and as team leader after, winning the regional team competition and then as teacher collaborating with local Univerity and High Schools. During the university career I was part of a research group focus on algorithms having the opportunity to publish for international journals and conferences. I always worked to improve my web development knowledge doing personal and work projects. Really comfortable using test driven development process in order to write maintainable code.",
     "France": "France",
     "Italy": "Italy",
     "Remote": "Remote",
@@ -32,4 +32,6 @@ export const i18n_en = {
     "French": "French",
     "Download Resume": "Download Resume",
     "research_description": "Since 2020 I published {num} articles in International Journals and Conferences especially in the field of Sampled String Matching. My research interest are mainly focused on: text and strings processing algorithms, exact and approximate pattern matching, multiple string matching, offline string matching, pattern matching on compressed texts and sort algorithms.",
+    "Developed using": "Developed using",
+    "Some feature have just learning purpose.": "Some feature have just learning purpose.",
 }
