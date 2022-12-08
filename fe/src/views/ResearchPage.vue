@@ -3,12 +3,7 @@
         <v-layout row justify-center align-center wrap class="mt-4 pt-2">
             <v-flex xs10 sm10 md10 lg8 xl8 class="mt-4 pt-4 pr-4 mr-4">
                 <div>
-                    Since 2020 I published {{ number_of_articles }} articles in International Journals and
-                    Conferences especially in the field of Sampled String Matching.
-                    <br>
-                    My research interest are mainly focused on: text and strings processing algorithms, exact and
-                    approximate pattern matching, multiple string matching, offline string matching, pattern matching on
-                    compressed texts and sort algorithms.
+                    {{$t("research_description", {num: number_of_articles})}}
                 </div>
             </v-flex>
             <v-flex justify-end align-end xs10 sm10 md10 lg3 xl3 class="mt-4 pt-2">

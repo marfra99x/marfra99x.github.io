@@ -9,12 +9,12 @@
                 </v-list-item>
                 <v-list-item active-class="primary--text" to="/resume">
                     <v-list-item-content>
-                        <v-list-item-title>RESUME</v-list-item-title>
+                        <v-list-item-title>{{$t("Resume")}}</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
                 <v-list-item active-class="primary--text" to="/research">
                     <v-list-item-content>
-                        <v-list-item-title>RESEARCH</v-list-item-title>
+                        <v-list-item-title>{{$t("Research")}}</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -32,8 +32,20 @@
             </v-btn>
             <v-app-bar-title class="hidden-sm-and-down">
                 <v-btn plain to="/" active-class="primary--text headline">Home</v-btn>
-                <v-btn plain to="/resume" active-class="primary--text headline">Resume</v-btn>
-                <v-btn plain to="/research" active-class="primary--text headline">Research</v-btn>
+                <v-btn plain to="/resume" active-class="primary--text headline">{{$t("Resume")}}</v-btn>
+                <v-btn plain to="/research" active-class="primary--text headline">{{$t("Research")}}</v-btn>
+                <v-menu left bottom>
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn icon v-bind="attrs" v-on="on">
+                                <v-img contain width="24" height="24" :src="`/${current}.png`"></v-img>
+                        </v-btn>
+                    </template>
+                    <v-list>
+                        <v-list-item v-for="l in language" :key="l" @click="changeLanguage(l)">
+                            <v-list-item-title> <v-img contain width="24" height="24" :src="`/${l}.png`"></v-img></v-list-item-title>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
                 <v-btn @click="changeTheme" depressed small icon>
                     <v-icon v-if="goDark == true">mdi-weather-sunny</v-icon>
                     <v-icon v-else>mdi-moon-waning-crescent</v-icon>
@@ -56,13 +68,20 @@ export default {
     },
     data() {
         return {
-            drawer: null
+            drawer: null,
+            language: [
+                "english_icon", "italy_icon", "french_icon"
+            ],
+            current: "english_icon",
         };
     },
     methods: {
         changeTheme() {
-
-            this.$emit("changeTheme", this.goDark);
+            this.$emit("changeTheme", this.goDark)
+        },
+        changeLanguage(l){
+            this.$root.$i18n.locale = l.substring(0,2)
+            this.current = l
         }
     }
 };
