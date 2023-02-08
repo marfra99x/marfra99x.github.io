@@ -26,10 +26,24 @@
                 <span class="primary--text headline text-capitalize">Marino</span>
             </v-app-bar-title>
             <v-spacer></v-spacer>
-            <v-btn @click="changeTheme" depressed small icon class="hidden-md-and-up">
-                <v-icon v-if="goDark == true">mdi-weather-sunny</v-icon>
-                <v-icon v-else>mdi-moon-waning-crescent</v-icon>
-            </v-btn>
+            <v-app-bar-title class="hidden-md-and-up">
+                <v-menu left bottom>
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn icon v-bind="attrs" v-on="on">
+                                <v-img contain width="24" height="24" :src="`/${current}.png`"></v-img>
+                        </v-btn>
+                    </template>
+                    <v-list>
+                        <v-list-item v-for="l in language" :key="l" @click="changeLanguage(l)">
+                            <v-list-item-title> <v-img contain width="24" height="24" :src="`/${l}.png`"></v-img></v-list-item-title>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
+                <v-btn @click="changeTheme" depressed small icon>
+                    <v-icon v-if="goDark == true">mdi-weather-sunny</v-icon>
+                    <v-icon v-else>mdi-moon-waning-crescent</v-icon>
+                </v-btn>
+            </v-app-bar-title>
             <v-app-bar-title class="hidden-sm-and-down">
                 <v-btn plain to="/" active-class="primary--text headline">Home</v-btn>
                 <v-btn plain to="/resume" active-class="primary--text headline">{{$t("Resume")}}</v-btn>
