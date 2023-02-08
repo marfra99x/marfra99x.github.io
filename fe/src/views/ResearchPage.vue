@@ -101,10 +101,17 @@ export default {
                     year: "2021",
                     authors: "Simone Faro, Francesco Pio Marino and Arianna Pavone"
                 },
+                {
+                    title: "Improved Characters Distance Sampling for Online and Offline Text Searching",
+                    publisher: "Theoretical Computer Science",
+                    href: "https://www.sciencedirect.com/science/article/abs/pii/S0304397522007642",
+                    year: "2022",
+                    authors: "S Faro, FP Marino, A Pavone",
+                },
             ],
-            number_of_articles: 6,
-            number_of_citations: 10,
-            h_index: 2,
+            number_of_articles: 7,
+            number_of_citations: 13,
+            h_index: 3,
         }
     },
 }
