@@ -1,5 +1,5 @@
 export const i18n_fr = {
-    "my_description": "Ma description",
+    "my_description": "Ingénieur full stack passionné depuis toujours par le codage. J'ai abordé la programmation compétitive en tant que candidat individuel, devenant d'abord champion régional et 50e italien classé, puis en tant que chef d'équipe, remportant la compétition par équipe régionale, puis en tant qu'enseignant collaborant avec l'université et les lycées locaux. Au cours de ma carrière universitaire, j'ai fait partie d'un groupe de recherche sur les algorithmes ayant l'opportunité de publier dans des Journal et conférences internationales. J'ai toujours travaillé pour améliorer mes connaissances en développement web en réalisant des projets personnels et professionnels. Vraiment à l'aise avec le test driving development afin d'écrire du code maintenable.",
     "France": "France",
     "Italy": "Italie",
     "Remote": "Remote",
@@ -31,7 +31,11 @@ export const i18n_fr = {
     "English": "Anglais",
     "French": "Français",
     "Download Resume": "Télécharger CV",
-    "research_description": "...",
-    "Developed using": "...",
-    "Some feature have just learning purpose.": "....",
+    "research_description": "Depuis 2020, j'ai publié {num} articles dans des journal et conférences internationales, en particulier dans le domaine du Sampled String Matching. Mes intérêts de recherche portent principalement sur : les algorithmes de traitement de texte, la recherche exact et approximatif, le pattern matching multiple,  offline string matching, pattern matching sur des textes compressés et les algorithmes de tri.",
+    "Developed using": "Développé avec",
+    "Some features have just learning purpose.": "Certaines fonctionnalités ont juste un but d'apprentissage",
+    "Travel": "Amateur",
+    "Lover": "Voyage",
+    "Football": "Passionné",
+    "Passionated": "Foot",
 }

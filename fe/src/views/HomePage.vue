@@ -13,12 +13,7 @@
             </v-flex>
             <v-flex justify-end align-end xs8 sm8 md5 lg3 xl3 class="ml-8 pl-8 pt-4">
                 <div class="text-left py-4 subheading font-weight-bold">
-                    <v-icon large color="primary" left>fa-solid fa-map-pin</v-icon>
-                    <span>Angers,&nbsp;</span>
-                    <span class="primary--text">{{$t("France")}}</span>
-                </div>
-                <div class="text-left py-4 subheading font-weight-bold">
-                        <v-icon large color="primary" left>fa-solid fa-cake-candles</v-icon>
+                        <v-icon large color="primary" left>fa-solid fa-map-pin</v-icon>
                         <span>Catania,&nbsp;</span>
                         <span class="primary--text">{{$t("Italy")}}</span>
                 </div>
@@ -28,9 +23,14 @@
                     <span class="primary--text">Remote</span>
                 </div>
                 <div class="text-left py-4 subheading font-weight-bold">
-                    <v-icon large color="primary" left>fa-solid fa-question</v-icon>
-                    <span>TO</span>
-                    <span class="primary--text">DO</span>
+                    <v-icon large color="primary" left>fa-solid fa-suitcase-rolling</v-icon>
+                    <span>{{$t("Travel")}}&nbsp;</span>
+                    <span class="primary--text">{{$t("Lover")}}</span>
+                </div>
+                <div class="text-left py-4 subheading font-weight-bold">
+                    <v-icon large color="primary" left>fa-solid fa-futbol</v-icon>
+                    <span>{{$t("Football")}}&nbsp;</span>
+                    <span class="primary--text">{{$t("Passionated")}}</span>
                 </div>
                 <div class="text-left py-4 subheading font-weight-bold">
                     <v-icon large color="primary" left>fa-solid fa-envelope</v-icon>

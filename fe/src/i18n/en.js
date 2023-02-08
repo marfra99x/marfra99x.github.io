@@ -33,5 +33,9 @@ export const i18n_en = {
     "Download Resume": "Download Resume",
     "research_description": "Since 2020 I published {num} articles in International Journals and Conferences especially in the field of Sampled String Matching. My research interest are mainly focused on: text and strings processing algorithms, exact and approximate pattern matching, multiple string matching, offline string matching, pattern matching on compressed texts and sort algorithms.",
     "Developed using": "Developed using",
-    "Some feature have just learning purpose.": "Some feature have just learning purpose.",
+    "Some features have just learning purpose.": "Some features have just learning purpose.",
+    "Travel": "Travel",
+    "Lover": "Lover",
+    "Football": "Football",
+    "Passionated": "Passionated",
 }
