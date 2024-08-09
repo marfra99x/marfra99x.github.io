@@ -4,7 +4,7 @@
 
 "podolsky":
   - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+    url: https://en.wikipedia.org/wiki/Boris_Podolskyaaa
 
 "rosen":
   - firstname: ["Nathan", "N."]
@@ -32,3 +32,15 @@
 "planck":
   - firstname: ["Max"]
     url: https://en.wikipedia.org/wiki/Max_Planck
+
+"faro":
+  - firstname: ["Simone", "S."]
+    url: https://www.dmi.unict.it/faro/
+
+"lecroq":
+  - firstname: ["Thierry", "T."]
+    url: http://www-igm.univ-mlv.fr/~lecroq/
+
+"pavone":
+  - firstname: ["Arianna", "a."]
+    url: https://www.ariannapavone.com

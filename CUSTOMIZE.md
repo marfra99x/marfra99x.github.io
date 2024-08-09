@@ -88,8 +88,8 @@ In publications, the author entry for yourself is identified by string array `sc
 
 ```yaml
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Marino]
+  first_name: [Francesco Pio, F. P.]
 ```
 
 If the entry matches one form of the last names and the first names, it will be underlined. Keep meta-information about your co-authors in [\_data/coauthors.yml](_data/coauthors.yml) and Jekyll will insert links to their webpages automatically. The co-author data format is as follows,
@@ -113,6 +113,15 @@ If the entry matches one form of the last names and the first names, it will be 
 
   - firstname: ["Carl Philipp Emanuel", "C. P. E."]
     url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+  
+"faro":
+  - firstname: ["Simone", "S."]
+    url: https://www.dmi.unict.it/faro/
+
+"lecroq":
+  - firstname: ["Thierry", "T."]
+    url: http://www-igm.univ-mlv.fr/~lecroq/
+
 ```
 
 If the entry matches one of the combinations of the last names and the first names, it will be highlighted and linked to the url provided.
