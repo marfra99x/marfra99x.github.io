@@ -19,4 +19,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm pursuing a double PhD at <a href='https://www.unict.it'>University of Catania</a> and at <a href='https://www.univ-rouen.fr'>University of Rouen</a> advised by <a href="https://www.dmi.unict.it/faro/">Simone Faro</a> and <a href="http://www-igm.univ-mlv.fr/~lecroq/">Thierry Lecroq</a>. 
+I'm pursuing a double PhD at <a href='https://www.unict.it'>University of Catania</a> and at <a href='https://www.univ-rouen.fr'>University of Rouen</a> advised by <a href="https://www.dmi.unict.it/faro/">Simone Faro</a> and <a href="http://www-igm.univ-mlv.fr/~lecroq/">Thierry Lecroq</a>. My research focuses on string processing, compression algorithms, combinatorial algorithms and pattern matching.

@@ -7,7 +7,5 @@ nav: true
 nav_order: 400
 ---
 
-{% include map.html %}
-{% include table.html %}
 
 
