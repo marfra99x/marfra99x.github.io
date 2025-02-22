@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genealogy Tree</title>
+    <div class="container mb-4">
+      My two academic “parents” (PhD advisors) are <a href="https://www.dmi.unict.it/faro/">Simone Faro</a> and
+      <a href="http://www-igm.univ-mlv.fr/~lecroq/">Thierry Lecroq</a>.
+      <br />
+      Made via <a href="https://mathgenealogy.org/index.php">The Mathematics Genealogy Project</a>.
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      /* Prevent scrolling on the entire page */
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Disable page scrolling */
+      }
+
+      #genealogy-container {
+        width: 100%;
+        height: 90vh; /* Takes up most of the viewport height */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
+        border: 1px solid #ccc; /* Optional border for visibility */
+        white-space: nowrap; /* Prevents the container from collapsing */
+      }
+
+      svg {
+        min-height: 2000px;
+        overflow: visible;
+        display: block;
+      }
+
+      text {
+        font-size: 14px;
+        fill: black;
+        text-anchor: middle; /* Center text above the circle */
+        font-weight: bold;
+      }
+
+      circle {
+        fill: steelblue;
+        stroke: black;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="genealogy-container">
+      <svg id="genealogy-tree"></svg>
+    </div>
+
+    <script>
+      fetch("/assets/genealogy.json")
+        .then((response) => response.json())
+        .then((data) => {
+          drawTree(data);
+
+          // Automatically scroll to the center of the tree
+          setTimeout(() => {
+            const container = document.getElementById("genealogy-container");
+            container.scrollLeft = container.scrollWidth - (container.scrollWidth/4.2)
+            container.scrollTop = 0; // Start at the top
+          }, 500);
+        })
+        .catch((error) => console.error("Error loading genealogy data:", error));
+
+      function drawTree(data) {
+        const baseWidth = 5000; // Initial width, will adjust dynamically
+        const height = 2000;
+
+        const svg = d3.select("#genealogy-tree").attr("height", height);
+
+        const treeLayout = d3.tree().size([baseWidth - 800, height - 400]); // Increased horizontal space
+        const root = d3.hierarchy(data);
+        treeLayout(root);
+
+        // Compute actual bounding box for centering and ensure full width
+        const minX = d3.min(root.descendants(), (d) => d.x * 2);
+        const maxX = d3.max(root.descendants(), (d) => d.x * 2);
+        const minY = d3.min(root.descendants(), (d) => d.y);
+        const maxY = d3.max(root.descendants(), (d) => d.y);
+
+        const treeWidth = maxX - minX + 400; // Extra padding for safety
+        svg.attr("width", treeWidth).style("min-width", treeWidth + "px");
+
+        // Offset the tree so the root is centered and fully scrollable
+        const offsetX = -minX + 200; // Shift so leftmost node is visible
+        const offsetY = 50 - minY;
+
+        const g = svg.append("g").attr("transform", `translate(${offsetX}, ${offsetY})`);
+
+        // Draw links
+        g.selectAll("line")
+          .data(root.links())
+          .enter()
+          .append("line")
+          .attr("x1", (d) => d.source.x * 2) // Increased horizontal spacing
+          .attr("y1", (d) => d.source.y)
+          .attr("x2", (d) => d.target.x * 2) // Increased horizontal spacing
+          .attr("y2", (d) => d.target.y)
+          .attr("stroke", "black");
+
+        // Draw nodes
+        g.selectAll("circle")
+          .data(root.descendants())
+          .enter()
+          .append("circle")
+          .attr("cx", (d) => d.x * 2) // Increased horizontal spacing
+          .attr("cy", (d) => d.y)
+          .attr("r", 8) /* Slightly larger for better visualization */
+          .attr("fill", "steelblue");
+
+        // Draw labels **ABOVE** each circle
+        g.selectAll("text")
+          .data(root.descendants())
+          .enter()
+          .append("text")
+          .attr("x", (d) => d.x * 2) // Increased horizontal spacing
+          .attr("y", (d) => d.y - 12) /* Moves text above the circle */
+          .attr("transform", (d) => `rotate(-10, ${d.x * 2}, ${d.y - 15})`) // Rotate text slightly
+          .style("font-size", (d) => (d.depth > 2 ? "12px" : "14px")) // Reduce text size for deeper nodes
+          .text((d) => d.data.name);
+      }
+    </script>
+  </body>
+</html>
