@@ -22,23 +22,19 @@
       }
     ]
   },
-  "work": [
+  "volunteer": [],
+  "visits": [
     {
-      "name": "Skillbill",
-      "position": "Software Engineer",
-      "url": "https://www.skillbill.it",
-      "startDate": "2022-06-01",
-      "endDate": "2024-01-20"
-    },
-    {
-      "name": "M2D",
-      "position": "Software Engineer",
-      "url": "https://www.m2d.tech",
-      "startDate": "2024-01-20",
-      "endDate": "2024-07-20"
+      "institution": "University of Yamanashi, Japan",
+      "location": "Kofu, Japan",
+      "url": "https://www.yamanashi.ac.jp/en/",
+      "area": "Computer Science",
+      "studyType": "Visiting Researcher",
+      "startDate": "2025-09-20",
+      "endDate": "2025-12-20",
+      "scope": "scientific collaboration with Prof. Dominik Köppl"
     }
   ],
-  "volunteer": [],
   "education": [
     {
       "institution": "University of Catania, Italy",
@@ -77,6 +73,22 @@
       "endDate": "Current"
     }
   ],
+  "work": [
+    {
+      "name": "Skillbill",
+      "position": "Software Engineer",
+      "url": "https://www.skillbill.it",
+      "startDate": "2022-06-01",
+      "endDate": "2024-01-20"
+    },
+    {
+      "name": "M2D",
+      "position": "Software Engineer",
+      "url": "https://www.m2d.tech",
+      "startDate": "2024-01-20",
+      "endDate": "2024-07-20"
+    }
+  ],
   "awards": [],
   "certificates": [],
   "publications": [],
@@ -107,7 +119,13 @@
     {
       "name": "Computer Science",
       "icon": "fa-solid fa-tag",
-      "keywords": ["String Algorithms", "Data Compression", "Combinatorial Algorithms", "Quantum Computing", "Quantum Information"]
+      "keywords": [
+        "String Algorithms",
+        "Data Compression",
+        "Combinatorial Algorithms",
+        "Quantum Computing",
+        "Quantum Information"
+      ]
     }
   ],
   "references": []
