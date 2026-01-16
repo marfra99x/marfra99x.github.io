@@ -113,14 +113,6 @@ If the entry matches one form of the last names and the first names, it will be 
 
   - firstname: ["Carl Philipp Emanuel", "C. P. E."]
     url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
-  
-"faro":
-  - firstname: ["Simone", "S."]
-    url: https://www.dmi.unict.it/faro/
-
-"lecroq":
-  - firstname: ["Thierry", "T."]
-    url: http://www-igm.univ-mlv.fr/~lecroq/
 
 ```
 

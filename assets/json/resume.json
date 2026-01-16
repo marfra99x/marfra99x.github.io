@@ -25,6 +25,16 @@
   "volunteer": [],
   "visits": [
     {
+      "institution": "Universidade Estadual de Campinas, Brazil",
+      "location": "Campinas, Brazil",
+      "url": "http://www.unicamp.br",
+      "area": "Computer Science",
+      "studyType": "Visiting Researcher",
+      "startDate": "2026-02-10",
+      "endDate": "2026-03-30",
+      "scope": "scientific collaboration with Prof. Guilherme P. Telles"
+    },
+    {
       "institution": "University of Yamanashi, Japan",
       "location": "Kofu, Japan",
       "url": "https://www.yamanashi.ac.jp/en/",
@@ -111,7 +121,7 @@
     },
     {
       "language": "Spanish",
-      "fluency": "Intermediate",
+      "fluency": "Fluent",
       "icon": ""
     }
   ],
