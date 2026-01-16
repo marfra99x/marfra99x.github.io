@@ -164,12 +164,12 @@
     {% capture link %}https://keybase.io/{{ site.keybase_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if site.gitlab_username %}
-    {% capture link %}https://gitlab.com/{{ site.gitlab_username }}{% endcapture %}
-    {% assign sameaslinks = sameaslinks | push: link %}
-  {% endif %}
   {% if site.dblp_url %}
     {% capture link %}{{ site.dblp_url }}{% endcapture %}
+    {% assign sameaslinks = sameaslinks | push: link %}
+  {% endif %}
+  {% if site.gitlab_username %}
+    {% capture link %}https://gitlab.com/{{ site.gitlab_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
   {% if site.stackoverflow_id %}

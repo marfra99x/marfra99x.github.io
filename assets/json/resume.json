@@ -32,7 +32,9 @@
       "studyType": "Visiting Researcher",
       "startDate": "2026-02-10",
       "endDate": "2026-03-30",
-      "scope": "scientific collaboration with Prof. Guilherme P. Telles"
+      "scope": "scientific collaboration",
+      "with": "Prof. Guilherme P. Telles",
+      "withUrl": "https://ic.unicamp.br/docente/guilherme-pimentel-telles/"
     },
     {
       "institution": "University of Yamanashi, Japan",
@@ -42,7 +44,9 @@
       "studyType": "Visiting Researcher",
       "startDate": "2025-09-20",
       "endDate": "2025-12-20",
-      "scope": "scientific collaboration with Prof. Dominik Köppl"
+      "scope": "scientific collaboration",
+      "with": "Prof. Dominik Köppl",
+      "withUrl": "https://dkppl.de"
     }
   ],
   "education": [
@@ -66,21 +70,14 @@
     },
     {
       "institution": "University of Catania, Italy",
-      "location": "Catania, Italy",
       "url": "https://www.unict.it/",
+      "institution2": "University of Rouen, France",
+      "url2": "https://www.univ-rouen.fr",
       "area": "Computer Science",
       "studyType": "PhD",
       "startDate": "2023-08-01",
-      "endDate": "Current"
-    },
-    {
-      "institution": "University of Rouen, France",
-      "location": "Rouen, France",
-      "url": "https://www.univ-rouen.fr",
-      "area": "Computer Science",
-      "studyType": "PhD",
-      "startDate": "2023-08-01",
-      "endDate": "Current"
+      "endDate": "Current",
+      "notes": "Joint PhD / Cotutelle"
     }
   ],
   "work": [
