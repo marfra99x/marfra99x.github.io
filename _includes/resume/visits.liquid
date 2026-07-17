@@ -44,6 +44,9 @@
           <h8 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">
             {{ content.scope }} with <a href="{{ content.withUrl }}">{{ content.with }}</a>
           </h8>
+          {% if content.with2 %}
+                and <a href="{{ content.withUrl2 }}">{{ content.with2 }}</a>
+              {% endif %}
           <ul class="items">
             {% for item in content.courses %}
               <li>
