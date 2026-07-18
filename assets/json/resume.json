@@ -110,17 +110,22 @@
     },
     {
       "language": "English",
-      "fluency": "Advanced",
+      "fluency": "Proficient",
       "icon": ""
     },
     {
       "language": "French",
-      "fluency": "Fleunt",
+      "fluency": "Advanced",
       "icon": ""
     },
     {
       "language": "Spanish",
-      "fluency": "Fluent",
+      "fluency": "Advanced",
+      "icon": ""
+    },
+    {
+      "language": "Portuguese",
+      "fluency": "Basic",
       "icon": ""
     }
   ],
