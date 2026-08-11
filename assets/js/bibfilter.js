@@ -63,12 +63,16 @@ document.addEventListener("DOMContentLoaded", function () {
     bibliographyItems.forEach((item) => {
       const publication = item.querySelector(".row[data-tag]");
 
-      const itemTags = (publication?.dataset.tag || "")
+      const itemTags = (
+        publication && publication.dataset
+          ? publication.dataset.tag || ""
+          : ""
+      )
         .toLowerCase()
         .split(/[\s,;]+/)
         .map((tag) => tag.trim())
         .filter(Boolean);
-
+        
       const matches =
         selectedTag === "all" ||
         selectedTag === "" ||
