@@ -1,7 +1,7 @@
 ---
 ---
-<div class="row">
-  {% if site.enable_publication_thumbnails %}
+<div class="row" data-tag="{{ entry.tag | default: '' | downcase | strip }}">
+{% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}

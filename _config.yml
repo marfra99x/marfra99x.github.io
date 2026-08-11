@@ -49,6 +49,7 @@ footer_fixed: true
 search_enabled: false
 socials_in_search: true
 bib_search: true
+bib_tag: true
 
 # Dimensions
 max_width: 930px

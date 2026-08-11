@@ -1,0 +1,144 @@
+{% if site.bib_tag %}
+  <style>
+    .bib-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.7rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .bib-filter {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+
+      min-width: 110px;
+      padding: 0.55rem 1.25rem;
+
+      border: 1.5px solid var(--global-theme-color);
+      border-radius: 9999px;
+
+      background-color: transparent;
+      color: var(--global-theme-color);
+
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+
+      cursor: pointer;
+      user-select: none;
+
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .bib-filter:hover {
+      background-color: var(--global-theme-color);
+      color: var(--global-bg-color);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .bib-filter.active {
+      background-color: var(--global-theme-color);
+      color: var(--global-bg-color);
+      border-color: var(--global-theme-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+    }
+
+    .bib-filter:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
+    }
+
+    .bib-filter:focus-visible {
+      outline: none;
+      box-shadow:
+        0 0 0 3px color-mix(
+          in srgb,
+          var(--global-theme-color) 25%,
+          transparent
+        ),
+        0 4px 12px rgba(0, 0, 0, 0.14);
+    }
+
+    .bib-filter i {
+      font-size: 0.9em;
+      pointer-events: none;
+    }
+
+    @media (max-width: 576px) {
+      .bib-filters {
+        gap: 0.5rem;
+        margin: 1.25rem 0 1.75rem;
+      }
+
+      .bib-filter {
+        min-width: auto;
+        padding: 0.5rem 1rem;
+        font-size: 0.88rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bib-filter {
+        transition: none;
+      }
+
+      .bib-filter:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <div
+    class="bib-filters"
+    role="group"
+    aria-label="Filter publications by research area"
+  >
+    <button
+      type="button"
+      class="bib-filter active"
+      data-filter="all"
+      aria-pressed="true"
+    >
+      <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+      <span>All</span>
+    </button>
+
+    <button
+      type="button"
+      class="bib-filter"
+      data-filter="quantum"
+      aria-pressed="false"
+    >
+      <i class="fa-solid fa-atom" aria-hidden="true"></i>
+      <span>Quantum</span>
+    </button>
+
+    <button
+      type="button"
+      class="bib-filter"
+      data-filter="stringology"
+      aria-pressed="false"
+    >
+      <i class="fa-solid fa-font" aria-hidden="true"></i>
+      <span>Stringology</span>
+    </button>
+  </div>
+
+  <script
+    src="{{ '/assets/js/bibfilter.js' | relative_url | bust_file_cache }}"
+    type="module"
+  ></script>
+{% endif %}
