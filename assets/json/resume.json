@@ -51,6 +51,38 @@
       "withUrl": "https://dkppl.de"
     }
   ],
+  "committee": [
+    {
+      "role": "Organizer",
+      "conference": "String-Masters Workshop",
+      "type": "Workshop",
+      "date": "2025-12-04",
+      "location": "Kofu, Japan"
+    },
+    {
+      "role": "Organizer",
+      "conference": "Catania String Days Workshop",
+      "type": "Workshop",
+      "date": "2026-01-19/20",
+      "location": "Catania, Italy"
+    },
+    {
+      "role": "Program Committee Chair",
+      "conference": "QUASAR 2026",
+      "type": "Workshop",
+      "edition": "3rd Workshop on Quantum Algorithms, Software and Applied Research",
+      "date": "2026-07-13",
+      "location": "Cleveland, OH, USA"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Student Paper Award",
+      "date": "2026-07-13",
+      "awarder": "3rd Workshop on Quantum Algorithms, Software and Applied Research (QUASAR 2026)",
+      "summary": "Awarded for the paper 'Delta-Based Rare Pattern Discovery with Quantum Speedup' presented at QUASAR 2026."
+    }
+  ],
   "education": [
     {
       "institution": "University of Catania, Italy",
@@ -71,10 +103,17 @@
       "endDate": "2022-07-28"
     },
     {
+      "institution": "University of Rouen, France",
+      "url": "https://www.univ-rouen.fr",
+      "area": "Computer Science",
+      "studyType": "PhD",
+      "startDate": "2023-08-01",
+      "endDate": "2026-09-18",
+      "notes": "Joint PhD / Cotutelle"
+    },
+    {
       "institution": "University of Catania, Italy",
       "url": "https://www.unict.it/",
-      "institution2": "University of Rouen, France",
-      "url2": "https://www.univ-rouen.fr",
       "area": "Computer Science",
       "studyType": "PhD",
       "startDate": "2023-08-01",
@@ -98,7 +137,6 @@
       "endDate": "2024-07-20"
     }
   ],
-  "awards": [],
   "certificates": [],
   "publications": [],
   "skills": [],
@@ -139,6 +177,25 @@
         "Combinatorial Algorithms",
         "Quantum Computing",
         "Quantum Information"
+      ]
+    }
+  ],
+  "reviewing": [
+    {
+      "name": "String Algorithms",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "29th Prague Stringology Conference (PSC26)"
+      ]
+    },
+    {
+      "name": "Quantum Algorithms",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Transactions on Quantum Computing, ACM",
+        "Frontiers in Quantum Science and Technology",
+        "Discover Computing",
+        "3rd Workshop on Quantum Algorithms, Software and Applied Research (QUASAR26)"
       ]
     }
   ],
