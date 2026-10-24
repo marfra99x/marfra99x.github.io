@@ -27,5 +27,6 @@ social: true # includes social icons at the bottom of the page
   <a href="https://www.dmi.unict.it/faro/" target="_blank" rel="noopener noreferrer">Simone Faro</a>
   and
   <a href="http://www-igm.univ-mlv.fr/~lecroq/" target="_blank" rel="noopener noreferrer">Thierry Lecroq</a>.
+  My <a href="https://marfra99x.github.io/assets/pdf/PhD_Thesis.pdf" target="_blank" rel="noopener noreferrer">PhD thesis</a> is available online.
   <br>You can explore my full <a href="/genealogy">academic family tree</a>.
 </p>
