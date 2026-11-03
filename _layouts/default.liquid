@@ -1,121 +1,105 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
-<!-- Head -->
+  <!-- Head -->
 
-<head>
+  <head>
     {% if page.redirect %}
-    {% if page.redirect == true %}
-    {% assign redirect = site.baseurl | append: '/' %}
-    {% elsif page.redirect contains '://' %}
-    {% assign redirect = page.redirect %}
-    {% else %}
-    {% assign redirect = page.redirect | relative_url %}
-    {% endif %}
-    <meta http-equiv="refresh" content="3; url={{ redirect }}">
+      {% if page.redirect == true %}
+        {% assign redirect = site.baseurl | append: '/' %}
+      {% elsif page.redirect contains '://' %}
+        {% assign redirect = page.redirect %}
+      {% else %}
+        {% assign redirect = page.redirect | relative_url %}
+      {% endif %}
+      <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
-</head>
+  </head>
 
-<!-- Body -->
+  <!-- Body -->
 
-<body
-    class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body
+    class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}"
+  >
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    {% if page.title == 'Travels'%}
-    <div class="mt-5" role="main">
+    {% if page.title == 'Travels' %}
+      <div class="mt-5" role="main">
         {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-        <div class="row">
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
+          {% if page.toc.sidebar == 'right' %}
+            <div class="row">
+              <div class="col-sm-9">{{ content }}</div>
+              <div class="col-sm-3">
                 <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
             </div>
-        </div>
-        {% else %}
-        <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
+          {% else %}
+            <div class="row">
+              <div class="col-sm-3">
                 <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
+              <div class="col-sm-9">{{ content }}</div>
             </div>
-        </div>
-        <!-- main content area -->
-        <div class="col-sm-9">{{ content }}</div>
-        {% endif %}
+          {% endif %}
         {% else %}
-
-        <div class="container mt-5" role="main">
-            {{content}}
-        </div>
-        {% include map.html %}
-        <div class="container mt-5" role="main">
+          <div class="container mt-5" role="main">
+            {{ content }}
+          </div>
+          {% include map.html %}
+          <div class="container mt-5" role="main">
             {% include table.html %}
-        </div>
+          </div>
         {% endif %}
-    </div>
-    {% else %}
-    {% if page.title == 'Genealogy'%}
-    <div class="mt-5" role="main">
+      </div>
+    {% elsif page.title == 'Genealogy' %}
+      <div class="mt-5" role="main">
         {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-        <div class="row">
-            <!-- main content area -->
+          {% if page.toc.sidebar == 'right' %}
+            <div class="row">
+              <div class="col-sm-9">{{ content }}</div>
+              <div class="col-sm-3">
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
+            </div>
+          {% else %}
+            <div class="row">
+              <div class="col-sm-3">
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
+            </div>
             <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-                <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-        </div>
+          {% endif %}
         {% else %}
-        <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-                <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-        </div>
-        <!-- main content area -->
-        <div class="col-sm-9">{{ content }}</div>
+          <div class="container mt-5" role="main">
+            {{ content }}
+          </div>
+          {% include tree.html %}
         {% endif %}
-        {% else %}
-
-        <div class="container mt-5" role="main">
-            {{content}}
-        </div>
-        {% include tree.html %}
-        {% endif %}
-    </div>
+      </div>
     {% else %}
-    <div class="container mt-5" role="main">
+      <div class="container mt-5" role="main">
         {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-        <div class="row">
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
+          {% if page.toc.sidebar == 'right' %}
+            <div class="row">
+              <div class="col-sm-9">{{ content }}</div>
+              <div class="col-sm-3">
                 <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
             </div>
-        </div>
-        {% else %}
-        <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
+          {% else %}
+            <div class="row">
+              <div class="col-sm-3">
                 <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
+              <div class="col-sm-9">{{ content }}</div>
             </div>
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-        </div>
-        {% endif %}
+          {% endif %}
         {% else %}
-        {{ content }}
+          {{ content }}
         {% endif %}
-    </div>
-
-    {% endif %}
+      </div>
     {% endif %}
 
     <!-- Footer -->
@@ -144,6 +128,5 @@
     {% include scripts/jekyll_tabs.liquid %}
     {% include scripts/back_to_top.liquid %}
     {% include scripts/search.liquid %}
-</body>
-
+  </body>
 </html>

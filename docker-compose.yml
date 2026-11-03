@@ -1,12 +1,13 @@
 services:
   jekyll:
-    image: amirpourmand/al-folio:latest
-    build: .
+    image: marfra99x-github-io:local
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - 8080:8080
-      - 35729:35729
+      - "8080:8080"
+      - "35729:35729"
     volumes:
       - .:/srv/jekyll
-      - ./vendor/bundle:/usr/local/bundle   # <— aggiungi questa
     environment:
-      - JEKYLL_ENV=development
+      JEKYLL_ENV: development

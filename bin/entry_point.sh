@@ -1,22 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-CONFIG_FILE=_config.yml 
+cd /srv/jekyll
 
-/bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
+# The source tree is bind-mounted in development. Ensure its Gemfile still
+# matches the gems installed in the image; install only if something changed.
+bundle check || bundle install --jobs 4 --retry 3
 
-while true; do
-
-  inotifywait -q -e modify,move,create,delete $CONFIG_FILE
-
-  if [ $? -eq 0 ]; then
- 
-    echo "Change detected to $CONFIG_FILE, restarting Jekyll"
-
-    jekyll_pid=$(pgrep -f jekyll)
-    kill -KILL $jekyll_pid
-
-    /bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
-
-  fi
-
-done
+exec bundle exec jekyll serve \
+  --watch \
+  --port 8080 \
+  --host 0.0.0.0 \
+  --livereload \
+  --force_polling

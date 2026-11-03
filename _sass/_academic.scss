@@ -1,0 +1,297 @@
+/*******************************************************************************
+ * Academic portfolio customizations
+ ******************************************************************************/
+
+.academic-intro {
+  .lead-copy {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+}
+
+.academic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.4rem 0 1.65rem;
+}
+
+.academic-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.58rem 0.9rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.45rem;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition:
+    transform 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+    box-shadow: 0 0.35rem 0.9rem rgba(0, 0, 0, 0.06);
+  }
+
+  &.primary {
+    border-color: var(--global-theme-color);
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+
+    &:hover {
+      color: var(--global-hover-text-color);
+      opacity: 0.92;
+    }
+  }
+}
+
+.status-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 1.25rem 0 2.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.55rem;
+  overflow: hidden;
+  background: var(--global-card-bg-color);
+
+  > div {
+    padding: 0.95rem 1rem;
+    min-width: 0;
+
+    & + div {
+      border-left: 1px solid var(--global-divider-color);
+    }
+  }
+
+  .status-label,
+  .status-detail {
+    display: block;
+  }
+
+  .status-label {
+    margin-bottom: 0.2rem;
+    color: var(--global-theme-color);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  strong {
+    display: block;
+    line-height: 1.25;
+  }
+
+  .status-detail {
+    margin-top: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.82rem;
+  }
+}
+
+.section-heading {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 2rem;
+}
+
+.research-card {
+  display: block;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.55rem;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color) !important;
+  text-decoration: none !important;
+  transition:
+    transform 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--global-theme-color);
+    box-shadow: 0 0.45rem 1.2rem rgba(0, 0, 0, 0.06);
+  }
+
+  h2,
+  h3 {
+    margin: 0.55rem 0 0.55rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  h3 {
+    font-size: 1.02rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: var(--global-text-color-light);
+    font-size: 0.91rem;
+    line-height: 1.55;
+  }
+}
+
+.research-card-static {
+  scroll-margin-top: 85px;
+
+  &:hover {
+    transform: none;
+    border-color: var(--global-divider-color);
+    box-shadow: none;
+  }
+
+  p:not(.research-links) {
+    color: var(--global-text-color);
+  }
+
+  .research-links {
+    margin-top: 0.8rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--global-divider-color);
+    color: var(--global-text-color-light);
+    font-size: 0.84rem;
+  }
+}
+
+.research-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--global-divider-color);
+  color: var(--global-theme-color);
+}
+
+.academic-highlight {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--global-theme-color);
+  background: var(--global-card-bg-color);
+
+  .highlight-icon {
+    margin-top: 0.05rem;
+    color: var(--global-theme-color);
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin: 0.2rem 0 0;
+    color: var(--global-text-color-light);
+  }
+}
+
+.quiet-link {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
+.timeline-clean {
+  margin: 1rem 0 2.25rem;
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 1.1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .timeline-date {
+    color: var(--global-theme-color);
+    font-size: 0.86rem;
+    font-weight: 700;
+  }
+
+  .timeline-content h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    margin: 0;
+    line-height: 1.55;
+  }
+}
+
+.conference-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem;
+
+  span {
+    padding: 0.42rem 0.68rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    background: var(--global-card-bg-color);
+    font-size: 0.83rem;
+  }
+}
+
+// Publication list: make the venue and the author's name easy to scan.
+.publications {
+  .author strong {
+    font-weight: 700;
+  }
+
+  .periodical .venue-name {
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .title {
+    line-height: 1.35;
+  }
+
+  .links a.btn {
+    border-radius: 0.3rem;
+  }
+}
+
+// Slightly more compact CV cards while retaining the original al-folio layout.
+.cv .card {
+  border-color: var(--global-divider-color);
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .status-panel,
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-panel > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .timeline-clean .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

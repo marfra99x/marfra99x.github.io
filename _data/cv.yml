@@ -1,0 +1,121 @@
+- title: Research Profile
+  type: map
+  contents:
+    - name: Focus
+      value: String algorithms, pattern matching, data compression, compressed indexing, text sampling, indeterminate and elastic-degenerate strings, and quantum algorithms.
+    - name: Ph.D. status
+      value: Ph.D. awarded by the University of Rouen Normandy in 2026; completing the University of Catania side of the joint cotutelle.
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. in Computer Science
+      institution: University of Rouen Normandy, France
+      year: 2023–2026
+      description:
+        - "Supervisors: Prof. Simone Faro and Prof. Thierry Lecroq."
+        - "Thesis: Text Sampling for Efficient Information Processing."
+    - title: Ph.D. in Computer Science
+      institution: University of Catania, Italy
+      year: 2023–Present
+      description:
+        - "Joint Ph.D. (cotutelle) with the University of Rouen Normandy."
+        - "Supervisors: Prof. Simone Faro and Prof. Thierry Lecroq."
+        - "Thesis: Text Sampling for Efficient Information Processing."
+    - title: Master’s Degree in Computer Science
+      institution: University of Catania, Italy
+      year: 2020–2022
+    - title: Erasmus Exchange
+      institution: Kaunas University of Technology, Lithuania
+      year: 2021–2022
+
+- title: Visiting Research Positions
+  type: time_table
+  contents:
+    - title: Visiting Researcher
+      institution: Universidade Estadual de Campinas (UNICAMP), Brazil
+      year: 2026
+      description:
+        - Scientific collaboration with Prof. Guilherme P. Telles and Prof. Felipe A. Louza.
+        - Research on indeterminate strings and indexing.
+    - title: Visiting Researcher
+      institution: University of Yamanashi, Japan
+      year: 2025
+      description:
+        - Scientific collaboration with Prof. Dominik Köppl.
+        - Research on string algorithms, compressed data structures, and recompression.
+
+- title: Teaching & Tutoring
+  type: time_table
+  contents:
+    - title: Junior Tutor — Italian Olympiad in Informatics
+      institution: University of Catania
+      year: 2019–2025
+    - title: Junior Tutor — Remedial Tutoring in Computer Science
+      institution: University of Catania
+      year: 2024–2025
+    - title: Junior Tutor — Pink Coding
+      institution: University of Catania
+      year: 2021
+
+- title: Awards
+  type: time_table
+  contents:
+    - title: Best Student Paper Award
+      institution: QUASAR 2026 — 3rd Workshop on Quantum Algorithms, Software and Applied Research
+      year: 2026
+      description:
+        - "Paper: Delta-Based Rare Pattern Discovery with Quantum Speedup."
+
+- title: Grants & Funding
+  type: time_table
+  contents:
+    - title: LITIS — Appel à projets scientifiques 2025
+      institution: Japan PhD Mobility Grant
+      year: 2025
+      description:
+        - "Role: Principal Investigator — EUR 2,500."
+    - title: French Embassy in Italy — Cassini Junior
+      institution: Catania String Days
+      year: 2025
+      description:
+        - "Role: Principal Investigator — EUR 500."
+    - title: INdAM–GNCS Project 2025
+      institution: "STaRQ — Soluzioni per l’Analisi e la Ricerca Quantistica di Testi"
+      year: 2025
+      description:
+        - "Role: Member — EUR 1,500."
+
+- title: Academic Service
+  type: time_table
+  contents:
+    - title: Program Committee Chair
+      institution: QUASAR 2026
+      year: 2026
+    - title: Organizer
+      institution: Catania String Days, Catania, Italy
+      year: 2026
+    - title: Organizer
+      institution: String-Masters Workshop, Kofu, Japan
+      year: 2025
+
+- title: Referee Service
+  type: list
+  contents:
+    - ACM Transactions on Quantum Computing
+    - Frontiers in Quantum Science and Technology
+    - Discover Computing
+    - STACS 2027
+    - WALCOM 2027
+    - Prague Stringology Conference 2026 (PSC26)
+    - QUASAR 2026
+
+- title: Invited Seminars
+  type: time_table
+  contents:
+    - title: "From Elastic-Degenerate Strings to Full-Text Indexing: Suffix Sorting, BWT, FM-Index Construction and Search"
+      institution: University of Caen Normandy
+      year: 2026
+    - title: Enhancing Exact and Approximate String Matching by Character Distance Sampling
+      institution: University of Rouen Normandy
+      year: 2024
